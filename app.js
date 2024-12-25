@@ -5,7 +5,7 @@ let btns = ["blue","red","purple","green"];
 let start = false;
 let level = 0;
 let h2 = document.querySelector("h2");
-document.addEventListener("click",function(){
+document.addEventListener("ontouchstart",function(){
     if(start==false){
        console.log("game started");
        start = true;
@@ -36,18 +36,19 @@ function levelUp(){
     console.log(randBtn);
     gameSeq.push(randColor);
     console.log(gameSeq);
-    gameFlash(randBtn); //random button
+    gameFlash(randBtn); 
 }
 function checkAns(idx){
     console.log("current level:",level);
-    // let idx = level - 1;
+    
     if(userSeq[idx] === gameSeq[idx]){
         if(userSeq.length == gameSeq.length){
             setTimeout(levelUp,1000);
         }
     }else{
         h2.innerHTML=`Game Over! Your Score was <b>${level}</b> <br> Press any key to Start.`;
-        // document.querySelector("body").style.backgroundColor = "red";
+        
+    
         reset();
     }
 }
@@ -56,7 +57,7 @@ function btnPress(){
     let btn = this;
     userFlash(btn);
     console.log("btn was pressed");
-    userColor = btn.getAttribute("id"); //to access color from each button
+    userColor = btn.getAttribute("id"); 
     console.log(userColor);
     userSeq.push(userColor);
 
