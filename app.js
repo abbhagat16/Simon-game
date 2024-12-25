@@ -5,7 +5,7 @@ let btns = ["blue","red","purple","green"];
 let start = false;
 let level = 0;
 let h2 = document.querySelector("h2");
-document.addEventListener("click",function(){
+document.addEventListener("keypress",function(){
     if(start==false){
        console.log("game started");
        start = true;
@@ -48,9 +48,6 @@ function checkAns(idx){
     }else{
         h2.innerHTML=`Game Over! Your Score was <b>${level}</b> <br> Press any key to Start.`;
         // document.querySelector("body").style.backgroundColor = "red";
-        setTimeout(function(){
-            document.querySelector("body").style.backgroundColor = "red";
-        },50);
         reset();
     }
 }
