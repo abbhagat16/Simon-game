@@ -1,36 +1,65 @@
-*{
+
+* {
     font-family: Georgia;
     text-align: center;
 }
-.box{
-    height:200px;
-    width:200px;
-    border:7px solid black;
-    margin:0.8rem;
+.box {
+    height: 150px; /* Adjusted for smaller screens */
+    width: 150px;  /* Adjusted for smaller screens */
+    border: 5px solid black; /* Reduced border width */
+    margin: 0.5rem; /* Adjusted margin for spacing */
 }
-.box-container{
+.box-container {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
-.red{
-    background-color:#e3655f;
-    border-top-left-radius:200px;
+.red {
+    background-color: rgb(119, 216, 112);
+    border-top-left-radius: 150px; /* Adjusted radius */
 }
-.blue{
-    background-color:#5f81c4;
-    border-bottom-left-radius:200px;
+.blue {
+    background-color: #0f2e6b;
+    border-bottom-left-radius: 150px; /* Adjusted radius */
 }
-.green{
-    background-color:#63aac0;
-    border-top-right-radius: 200px;
+.green {
+    background-color: #63aac0;
+    border-top-right-radius: 150px; /* Adjusted radius */
 }
-.purple{
-    background-color:#b7669c;
-    border-bottom-right-radius:200px ;
+.purple {
+    background-color: #b7669c;
+    border-bottom-right-radius: 150px; /* Adjusted radius */
 }
-.flash{
-    background-color:ghostwhite;
+.flash {
+    background-color: ghostwhite;
 }
-.userFlash{
+.userFlash {
     background-color: aquamarine;
+}
+
+
+@media (max-width: 375px) {
+    .box {
+        height: 130px; 
+        width: 130px;
+        border: 4px solid black;
+        margin: 0.4rem;
+    }
+    .red, .blue, .green, .purple {
+        border-radius: 130px; 
+    }
+}
+@media (max-width: 320px) {
+    .box {
+        height: 100px; 
+        width: 100px;
+        border: 3px solid black;
+        margin: 0.3rem;
+    }
+    .red, .blue, .green, .purple {
+        border-radius: 100px; 
+    }
+    * {
+        font-size: 14px; 
+    }
 }
