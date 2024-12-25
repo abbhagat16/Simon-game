@@ -5,7 +5,7 @@ let btns = ["blue","red","purple","green"];
 let start = false;
 let level = 0;
 let h2 = document.querySelector("h2");
-document.addEventListener("touchstart",function(){
+document.addEventListener("keypress",function(){
     if(start==false){
        console.log("game started");
        start = true;
@@ -46,7 +46,7 @@ function checkAns(idx){
             setTimeout(levelUp,1000);
         }
     }else{
-        h2.innerHTML=`Game Over! Your Score was <b>${level}</b> <br> Touch anywhere to Start.`;
+        h2.innerHTML=`Game Over! Your Score was <b>${level}</b> <br> press keyword to start.`;
         
     
         reset();
